@@ -1,0 +1,51 @@
+:root {
+   --matcha: #9bcd6c;
+   --matchaLight: #b4dc87;
+}
+
+*
+{
+   font-family: Verdana;
+}
+
+#counterNumber {
+   display: block;
+   text-align: center;
+   font-size: 8em;
+   margin: 0px;
+}
+
+.buttonContainer
+{
+   text-align: center;
+   margin-top: 1em;
+}
+
+.buttons {
+   background-color: var(--matcha);
+   border: none;
+   border-radius: 1em;
+   height: 3em;
+   width: 6em;
+   box-shadow: #609827 0px 0.25em;
+   transition: 0.1s;
+   margin-left: 0.5em
+}
+
+.buttons:hover {
+   background-color: var(--matchaLight);
+} 
+
+.buttons:active {
+   background-color: #99bb73;
+   transform: translateY(0.25em);
+   height: 2.85em;
+   box-shadow: none;
+}
+
+@media (prefers-color-scheme: dark) {
+  body {
+    background-color: #121212;
+    color: #ffffff;
+  }
+}
