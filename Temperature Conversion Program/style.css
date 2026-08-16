@@ -1,0 +1,39 @@
+h1 
+{
+   color: rgb(145, 57, 246);
+}
+
+form 
+{
+   background-color: rgb(180, 236, 137);
+   margin: auto;
+   border-radius: 1rem;
+   padding: 1rem 2rem;
+   width: fit-content;
+   text-align: center;
+}
+
+#temperatureInputBox
+{    
+
+   margin-bottom: 0.75em;
+   height: 2.5em;
+   width: 15em;
+}
+
+input[type="radio"], label {
+   margin-top: 0.25rem;
+}
+
+#convertBtn
+{
+   font-size: 1rem;
+   padding: 0.25rem 1rem;
+   margin-top: 0.75rem;
+}
+
+#resultText
+{
+   font-size: 1.25em;
+   font-weight: bold;
+}

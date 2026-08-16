@@ -1,0 +1,22 @@
+#mainWindow
+{
+   display: grid;
+   grid-template-columns: 1fr 1fr;
+   height: 75vh;
+}
+
+.checkboxContainer
+{
+   width: 100%;
+   display: block;
+}
+
+.deleteButton
+{
+   margin-left: 20%;
+}
+
+#warnText
+{
+   color: red;
+}

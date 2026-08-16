@@ -1,0 +1,79 @@
+* {
+   font-family: Pixelify Sans;
+   color: white;
+}
+
+html {
+   height: 100%;
+}
+
+body
+{
+   background: linear-gradient(to bottom, #473720, #110d07);
+   min-height: 100vh;
+}
+
+input[type=text] {
+   background-color: #33230b;
+   border-color: #96794d;
+   height: 2em;
+   width: 12em;
+   border-radius: 5px;
+   border-style: solid;
+}
+
+input:focus 
+{
+   outline: none;
+   border-color: #bf9960;
+
+}
+
+#submitbutton {
+   background-color: rgb(108, 152, 43);
+   padding: 5px 10px;
+   border-radius: 5px;
+   border: none;
+   box-shadow: 0px 3px rgb(60, 91, 13);
+   cursor: pointer;
+   transition: 0.01s ease-out;
+
+}
+
+#submitbutton:active {
+   box-shadow: none;
+   background-color: rgb(72, 101, 28);
+   transform: translateY(3px);
+}
+
+
+.choiceButton {
+   background-color: rgb(108, 152, 43);
+   padding: 5px 10px;
+   border-radius: 5px;
+   border: none;
+   box-shadow: 0px 3px rgb(60, 91, 13);
+   cursor: pointer;
+   display: none;
+   transition: 0.01s ease-out;
+
+}
+
+.choiceButton:active {
+   box-shadow: none;
+   background-color: rgb(72, 101, 28);
+   transform: translateY(3px);
+}
+
+.warning 
+{
+   display: none;
+   color: rgb(218, 0, 0);
+}
+
+@media (prefers-color-scheme: dark) {
+  body {
+    background-color: #121212;
+    color: #ffffff;
+  }
+}

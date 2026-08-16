@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <link rel="stylesheet" href="style.css">
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+   <link href="https://fonts.googleapis.com/css2?family=Pixelify+Sans:wght@400..700&display=swap" rel="stylesheet">
+   <title>MMORPG Profile System</title>
+</head>
+<body>
+   
+<div class="mainContainer">
+
+<!--Welcome part-->
+<div id="usernameSection">
+
+   <span>Welcome to Orania!</span> <br>
+   <label>Set a username</label>
+   <input type="text" id="userName" placeholder="My name is"> 
+   <button id="confirmBtn">Confirm</button> <br>
+   <small class="warning" id="warningText">You cannot change your username later.</small> <br>
+
+</div>
+
+<p id="greeting"></p>
+
+<!--Choose class part-->
+
+<div id="classSelection">
+   
+   <button class="button" id="mageBtn">Mage</button>
+   <button class="button" id="archerBtn">Archer</button>
+   <button class="button" id="warriorBtn">Warrior</button>
+   <p id="displayClass"></p>
+
+</div>
+
+<!--Choose Weapon part-->
+
+<div id="weaponSelection">
+   <button class="button" id="weapon1"></button>
+   <button class="button" id="weapon2"></button>
+   <button class="button" id="weapon3"></button>
+   <p id="displayWeapon"></p>
+</div>
+
+
+<script src="main.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,61 @@
+:root {
+   --matcha: #9bcd6c;
+   --matchaLight: #b4dc87;
+}
+
+*
+{
+   font-family: Arial;
+}
+
+@media (prefers-color-scheme: dark) {
+  body {
+    background-color: #121212;
+    color: #ffffff;
+  }
+}
+
+.buttonContainer
+{
+   display: block;
+   text-align: center;
+}
+
+
+#diceFace {
+   display: block;
+   margin-left: auto;
+   margin-right: auto;
+   height: 10em;
+   width: 10em;
+}
+
+#resultText {
+   text-align: center;
+   display: block;
+   margin-bottom: 1em;
+   margin-top: 1em;
+   font-size: 1.25em;
+}
+
+.button {
+   background-color: var(--matcha);
+   border: none;
+   border-radius: 1em;
+   height: 3em;
+   width: 6em;
+   box-shadow: #609827 0px 0.25em;
+   transition: 0.1s;
+   margin-left: 0.5em
+}
+
+.button:hover {
+   background-color: var(--matchaLight);
+} 
+
+.button:active {
+   background-color: #99bb73;
+   transform: translateY(0.25em);
+   height: 2.85em;
+   box-shadow: none;
+}
