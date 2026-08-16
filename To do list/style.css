@@ -60,7 +60,7 @@ body
    display: grid;
    grid-template-columns: 3fr 0.5fr;
    gap: 0.75rem;
-   margin: 1rem 1rem 0.5rem 0rem;
+   margin: 1rem 1rem 2rem 0rem;
 
 }
 
@@ -95,7 +95,7 @@ body
 
 #warnText
 {
-   color: red;
+   color: rgb(217, 83, 15);
    font-size: 1rem;
 }
 
@@ -120,6 +120,7 @@ body
    height: fit-content;
    align-items: center;
    overflow-wrap: normal;
+   margin-top: 1rem;
 }
 
 .checkboxContainer label
@@ -141,3 +142,43 @@ body
    
 }
 
+.uiButton {
+   background-color: rgb(152, 123, 43);
+   padding: 0.5rem 0.75rem;
+   border-radius: 1rem;
+   border: none;
+   box-shadow: 0px 3px rgb(91, 59, 13);
+   cursor: pointer;
+   transition: 0.05s ease-out;
+   color: var(--fontColor);
+
+}
+
+.uiButton:active {
+   box-shadow: none;
+   background-color: rgb(136, 110, 38);
+   transform: translateY(3px);
+}
+
+.deleteButton
+{
+   background-color: rgb(152, 123, 43);
+   padding: 0.5rem 0.75rem;
+   border-radius: 1rem;
+   border: none;
+   box-shadow: 0px 3px rgb(93, 55, 2);
+   cursor: pointer;
+   transition: 0.1s ease-out;
+   color: var(--fontColor);
+}
+
+.deleteButton:hover
+{
+   background-color: rgb(137, 63, 25);
+}
+
+.deleteButton:active {
+   box-shadow: none;
+   background-color: rgb(105, 43, 11);
+   transform: translateY(3px);
+}
