@@ -5,23 +5,35 @@
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
    <title>Demo To Do List</title>
    <link rel="stylesheet" href="style.css">
+   <link rel="preconnect" href="https://fonts.googleapis.com">
+   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+   <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap" rel="stylesheet">
 </head>
 
 <body>
 
 <div id="mainWindow">
 
+<div id="navContainer">
+
+</div>
+
+<div id="todoContainer">
+
    <div id="todoWindow">
-
-      <input id="taskInputBox" type="text" placeholder="Enter Task Name">
-      <button id="addBtn">Add new task</button> <br>
-      <small id="warnText"></small>
-
+      <h1 id="leftH1">Left</h1>
+      <div id="inputContainer">
+         <input id="taskInputBox" type="text" placeholder="Enter Task Name">
+         <button id="addBtn">New task</button> 
+      </div>
+      <p id="warnText"></p>
    </div>
 
    <div id="doneWindow">
-
+      <h1 id="doneH1">Done</h1>
    </div>
+
+</div>
 
 </div>
 

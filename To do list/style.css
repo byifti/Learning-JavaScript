@@ -1,22 +1,143 @@
+:root
+{
+   --backgroundColor: #181C07;
+   --fontColor: #E9E2B5;
+   --accentColor: #CFB300;
+}
+
+@media (prefers-color-scheme: dark) {
+  body {
+    background-color: var(--backgroundColor);
+    color: var(--fontColor);
+  }
+}
+
+body
+{
+   font-family: Lato;
+   font-weight: 300;
+}
+
+*
+{
+   margin: 0;
+}
+
 #mainWindow
 {
    display: grid;
-   grid-template-columns: 1fr 1fr;
-   height: 75vh;
+   height: 100vh;
+   width: 100vw;
+   grid-template-rows: 5rem 1fr;
 }
 
-.checkboxContainer
+#todoContainer
+{
+   display: grid;
+   grid-template-columns: 1fr 1fr;
+
+}
+
+#todoWindow
+{
+   border-right: 1px solid rgb( from var(--accentColor) r g b /0.3);
+   margin-left: 2.75rem;
+   /*width: 100%; not sure why this messes up kayout a bit, fixes wrapping issue tho*/
+}
+
+#doneWindow
 {
    width: 100%;
-   display: block;
 }
 
-.deleteButton
+#doneWindow, #todoWindow
 {
-   margin-left: 20%;
+   height: 100%;
+}
+
+#inputContainer
+{
+   display: grid;
+   grid-template-columns: 3fr 0.5fr;
+   gap: 0.75rem;
+   margin: 1rem 1rem 0.5rem 0rem;
+
+}
+
+#taskInputBox
+{
+   background-color: transparent;
+   color: var(--fontColor);
+   border: none;
+   border-bottom: 1px solid rgb( from var(--accentColor) r g b /0.6);
+   padding: 0.5rem 2rem 0.5rem 1rem;
+   transition: 0.1s ease-in-out;
+
+}
+
+#taskInputBox:focus
+{
+   border-bottom-color: rgb( from var(--accentColor) r g b /0.8);
+   outline: none;
+}
+
+#taskInputBox::placeholder
+{
+   color: var(--fontColor);
+   opacity: 0.5;
+   transition: 0.1s ease-in-out;
+}
+
+#taskInputBox:focus::placeholder
+{
+   opacity: 0.7;
 }
 
 #warnText
 {
    color: red;
+   font-size: 1rem;
 }
+
+#leftH1, #doneH1
+{
+   letter-spacing: 1px;
+   font-weight: 550;
+   text-decoration: underline;
+   text-underline-offset: 0.5rem;
+   text-decoration-thickness: 2px;
+}
+
+#doneH1
+{
+   margin-left: 2.75rem;
+}
+
+.checkboxContainer
+{
+   width: 100%;
+   display: flex;
+   height: fit-content;
+   align-items: center;
+   overflow-wrap: normal;
+}
+
+.checkboxContainer label
+{
+   margin-left: 0.5rem;
+   font-size: 1.5rem;
+   font-weight: 400;
+}
+
+.deleteButton
+{
+   height: min-content;
+   margin-left: auto;
+   margin-right: 0.5rem;
+}
+
+#navContainer
+{
+   
+}
+
