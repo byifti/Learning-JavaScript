@@ -4,16 +4,26 @@ let doneWindow = document.getElementById("doneWindow")
 let idNum = 0; // Setting ID at 0 initially
 let checkboxName = "checkbox"; // Setting checkbox name initially, got idea myself
 let warnText = document.getElementById("warnText")
+let taskInputBox = document.getElementById("taskInputBox");
 
 calcLeft()
 calcDone()
 
 addBtn.addEventListener("click", createNewTask);
+taskInputBox.addEventListener("keydown", handleEnter)
+
+function handleEnter(event)
+{
+   if(event.key === "Enter")
+   {
+      event.preventDefault()
+      createNewTask()
+   }
+}
 
 function createNewTask() 
 {
    idNum += 1; 
-   let taskInputBox = document.getElementById("taskInputBox");
    let checkboxID;
    let checkbox;
    let containerID;
@@ -101,7 +111,7 @@ function calcLeft()
 
 function calcDone() 
 {
-   let todoWindow = document.getElementById("doneWindow");
+   let doneWindow = document.getElementById("doneWindow");
    let doneCountText = document.getElementById("doneCountText");
    let totalContainers = doneWindow.getElementsByClassName("checkboxContainer");
    let taskNum = totalContainers.length;
