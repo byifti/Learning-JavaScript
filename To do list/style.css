@@ -35,24 +35,25 @@ body
 {
    display: grid;
    grid-template-columns: 1fr 1fr;
+   max-height: 93%; 
+   overflow-y: auto;
+}
 
+#doneWindow, #todoWindow
+{
+   height: 100%;
+   overflow-y: auto;
 }
 
 #todoWindow
 {
    border-right: 1px solid rgb( from var(--accentColor) r g b /0.3);
    margin-left: 2.75rem;
-   /*width: 100%; not sure why this messes up kayout a bit, fixes wrapping issue tho*/
 }
 
 #doneWindow
 {
-   width: 100%;
-}
-
-#doneWindow, #todoWindow
-{
-   height: 100%;
+   margin-left: 2.75rem;
 }
 
 #inputContainer
@@ -106,11 +107,7 @@ body
    text-decoration: underline;
    text-underline-offset: 0.5rem;
    text-decoration-thickness: 2px;
-}
-
-#doneH1
-{
-   margin-left: 2.75rem;
+   display: inline-block;
 }
 
 .checkboxContainer
@@ -121,13 +118,16 @@ body
    align-items: center;
    overflow-wrap: normal;
    margin-top: 1rem;
+   
 }
 
 .checkboxContainer label
 {
-   margin-left: 0.5rem;
-   font-size: 1.5rem;
+   margin-left: 1rem;
+   margin-right: 0.5rem;
+   font-size: 1.3rem;
    font-weight: 400;
+
 }
 
 .deleteButton
@@ -139,7 +139,7 @@ body
 
 #navContainer
 {
-   
+   /* Will style later */
 }
 
 .uiButton {
@@ -152,6 +152,11 @@ body
    transition: 0.05s ease-out;
    color: var(--fontColor);
 
+}
+
+.uiButton:hover
+{
+   background-color: rgb(172, 139, 48);
 }
 
 .uiButton:active {
@@ -170,6 +175,7 @@ body
    cursor: pointer;
    transition: 0.1s ease-out;
    color: var(--fontColor);
+   margin-right: 1rem;
 }
 
 .deleteButton:hover
@@ -181,4 +187,16 @@ body
    box-shadow: none;
    background-color: rgb(105, 43, 11);
    transform: translateY(3px);
+}
+
+span 
+{
+   font-size: 1rem;
+   font-weight: 300;
+   color: var(--fontColor);
+}
+
+#taskCountText, #doneCountText
+{
+   margin-left: 0.5rem;
 }

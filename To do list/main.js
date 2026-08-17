@@ -4,9 +4,14 @@ let doneWindow = document.getElementById("doneWindow")
 let idNum = 0; // Setting ID at 0 initially
 let checkboxName = "checkbox"; // Setting checkbox name initially, got idea myself
 let warnText = document.getElementById("warnText")
+
+calcLeft()
+calcDone()
+
 addBtn.addEventListener("click", createNewTask);
 
-function createNewTask() {
+function createNewTask() 
+{
    idNum += 1; 
    let taskInputBox = document.getElementById("taskInputBox");
    let checkboxID;
@@ -52,6 +57,8 @@ function createNewTask() {
 
    checkbox = document.getElementById(`${checkboxID}`);
 
+   calcLeft()
+
    taskInputBox.value = ``;
 
    // console.log(checkbox);
@@ -61,11 +68,14 @@ function createNewTask() {
       if(checkbox.checked) {
          doneWindow.append(checkboxContainer)
          newLabel.style.textDecoration = "line-through";
-
+         calcDone()
+         calcLeft()
       }
       else {
          newLabel.style.textDecoration = "none"
          todoWindow.append(checkboxContainer)
+         calcDone()
+         calcLeft()
       };
    } 
 
@@ -73,8 +83,28 @@ function createNewTask() {
    {
       checkboxContainer.remove()
       console.log("You clicked delete")
+      calcLeft()
+      calcDone()
    };
 
 };
 
+function calcLeft() 
+{
+   let todoWindow = document.getElementById("todoWindow");
+   let taskCountText = document.getElementById("taskCountText");
+   let totalContainers = todoWindow.getElementsByClassName("checkboxContainer");
+   let taskNum = totalContainers.length;
 
+   taskCountText.textContent = `(${taskNum})`
+}
+
+function calcDone() 
+{
+   let todoWindow = document.getElementById("doneWindow");
+   let doneCountText = document.getElementById("doneCountText");
+   let totalContainers = doneWindow.getElementsByClassName("checkboxContainer");
+   let taskNum = totalContainers.length;
+
+   doneCountText.textContent = `(${taskNum})`
+}
