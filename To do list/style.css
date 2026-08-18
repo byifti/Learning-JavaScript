@@ -115,7 +115,7 @@ body
    margin-bottom: 4.75rem; /*So that the position matches todo tasks's position. Not sure if I like it tho, might be too empty*/
 }
 
-.checkboxContainer
+.checkboxContainer, .deleteCheckboxContainer
 {
    width: 100%;
    display: flex;
@@ -126,13 +126,18 @@ body
    
 }
 
-.checkboxContainer label
+.checkboxContainer label, .deleteCheckboxContainer label
 {
    margin-left: 1rem;
    margin-right: 0.5rem;
    font-size: 1.3rem;
    font-weight: 400;
 
+}
+
+.checkboxContainer
+{
+   animation: fadeSlide 0.2s ease-in forwards;
 }
 
 .deleteButton
@@ -199,4 +204,35 @@ span
 #taskCountText, #doneCountText
 {
    margin-left: 0.5rem;
+}
+
+@keyframes fadeSlide
+{
+   0%
+   {
+      opacity: 50%;
+      transform: translateX(-1rem);
+   }
+   100% 
+   {
+      opacity: 100%;
+      transform: translateX();
+   }
+}
+
+@keyframes deleted
+{
+   0%
+   {
+      opacity: 100%;
+   }
+   100% 
+   {
+      opacity: 0%;
+   }
+}
+
+.deleteCheckboxContainer
+{
+   animation: deleted 0.25s ease-in-out forwards;
 }

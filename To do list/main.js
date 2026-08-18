@@ -89,12 +89,20 @@ function createNewTask()
       };
    } 
 
-   deleteButton.onclick = function()
+   deleteButton.addEventListener("click", deleteAnimation)
+
+   function deleteAnimation()
    {
-      checkboxContainer.remove()
-      console.log("You clicked delete")
-      calcLeft()
-      calcDone()
+      checkboxContainer.setAttribute("class", "deleteCheckboxContainer")
+      checkboxContainer.addEventListener("animationend", deleteTask)
+      
+      function deleteTask()
+      {
+         checkboxContainer.remove()
+         calcLeft()
+         calcDone()
+      }
+
    };
 
 };
