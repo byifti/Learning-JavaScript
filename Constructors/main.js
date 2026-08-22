@@ -21,6 +21,8 @@ console.log(task3.label)
 console.log(task3.id)
 console.log(task3.isChecked)
 
+// -------------------------------------------------------------------------------
+
 function game(gameName, dev, isReleased)
    {
       this.gameName = gameName,
